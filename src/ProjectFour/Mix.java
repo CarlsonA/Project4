@@ -84,6 +84,7 @@ public class Mix {
     }
 
     private void remove(int start, int stop) {
+        System.out.println("Testing Git");
 
     }
 
