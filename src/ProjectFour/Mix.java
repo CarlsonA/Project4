@@ -64,6 +64,9 @@ public class Mix {
                     case "h":
                         helpPage();
                         break;
+                    case "z":
+                        //TODO this
+
 
                     // all the rest of the commands have not been done
                     // No "real" error checking has been done.
@@ -92,9 +95,9 @@ public class Mix {
      *             user input
      *****************************************************************/
     private void remove(int start, int stop) {
-        start = userMessage.indexOf(2);
-        stop = userMessage.indexOf(userMessage.length()-1);
-        userMessage = userMessage.replace(userMessage.substring(start, stop), "");
+//        start = userMessage.indexOf(2);
+//        stop = userMessage.indexOf(userMessage.length()-1);
+//        userMessage = userMessage.replace(userMessage.substring(start, stop), "");
     }
 
     private void cut(int start, int stop, int clipNum) {
@@ -110,13 +113,13 @@ public class Mix {
     }
 
     private void insertbefore(String token, int index) {
-        userMessage = userMessage.substring(0, index) + token +
-            userMessage.substring(index+1);
+//        userMessage = userMessage.substring(0, index) + token +
+//            userMessage.substring(index+1);
     }
 
     private void DisplayMessage() {
         MessageHelper();
-        System.out.print ("Message:\n" + userMessage);
+        System.out.print ("Message:\n");
         userMessage = message.toString();
 
         
