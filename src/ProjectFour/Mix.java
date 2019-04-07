@@ -83,9 +83,18 @@ public class Mix {
         } while (true);
     }
 
+    /******************************************************************
+     * Removes a part of the string based on the index positions
+     * provided by the user
+     * @param start determines what index remove will start at based on
+     *              user input
+     * @param stop determines what index remove will stop at based on
+     *             user input
+     *****************************************************************/
     private void remove(int start, int stop) {
-        System.out.println("Testing Git");
-
+        start = userMessage.indexOf(2);
+        stop = userMessage.indexOf(userMessage.length()-1);
+        userMessage = userMessage.replace(userMessage.substring(start, stop), "");
     }
 
     private void cut(int start, int stop, int clipNum) {
@@ -101,12 +110,16 @@ public class Mix {
     }
 
     private void insertbefore(String token, int index) {
-
+        userMessage = userMessage.substring(0, index) + token +
+            userMessage.substring(index+1);
     }
 
     private void DisplayMessage() {
-        System.out.print ("Message:\n");
+        MessageHelper();
+        System.out.print ("Message:\n" + userMessage);
         userMessage = message.toString();
+
+        
 
         for (int i = 0; i < userMessage.length(); i++)
             System.out.format ("%3d", i);
@@ -137,4 +150,15 @@ public class Mix {
         System.out.println("\t .... etc" );
         System.out.println("\th\tmeans to show this help page");
     }
+
+    public void MessageHelper(){
+        //
+        char[] temp = userMessage.toCharArray();
+
+        //
+        for(int i = 0; i < temp.length; i++){
+            message.addNode(temp[i]);
+        }
+    }
+
 }
