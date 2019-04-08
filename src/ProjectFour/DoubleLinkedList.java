@@ -65,5 +65,28 @@ public class DoubleLinkedList<E>  {
         return count;
     }
 
+    public void insertBefore(E data, int index){
+        NodeD temp;
+        NodeD temp2;
+
+        if(top == null){
+            top = new NodeD(data, null, null);
+        }
+        if(index == 0){
+            temp = top;
+            top = new NodeD(data, temp, null);
+            temp.setPrev(top);
+            length++;
+        }
+        else{
+            temp = top;
+            for(int i = 0; i < 0; i++){
+                temp = temp.getNext();
+            }
+            temp2 = new NodeD(data, temp, temp.getPrev());
+            temp.getPrev().setNext(temp2);
+            length++;
+        }
+    }
 
 }

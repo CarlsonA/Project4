@@ -4,7 +4,7 @@ import java.io.*;
 import java.util.Hashtable;
 import java.util.Scanner;
 
-public class Mix {
+public class Mix extends DoubleLinkedList {
 
     private DoubleLinkedList<Character> message;
     private String undoCommands;
@@ -113,9 +113,10 @@ public class Mix {
     }
 
     private void insertbefore(String token, int index) {
-//        userMessage = userMessage.substring(0, index) + token +
-//            userMessage.substring(index+1);
+        insertBefore(token, index);
     }
+
+    
 
     private void DisplayMessage() {
         MessageHelper();
