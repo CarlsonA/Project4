@@ -4,7 +4,7 @@ public class DoubleLinkedList<E>  {
     protected NodeD<E> top;      // The first NodeD<E> in the list
 
     // This instance variable is not required, however if you
-    // find it useful, then you are welcome to use it
+    // find it useful, then you are welcome to use it.
     protected NodeD<E> cursor;  // The current NodeD<E> in the list
 
     private int length;
